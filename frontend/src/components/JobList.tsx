@@ -60,6 +60,8 @@ export const StatusBadge: React.FC<{ status: string }> = ({ status }) => {
     completed: { bg: '#d4edda', text: '#155724' },
     failed: { bg: '#f8d7da', text: '#721c24' },
     cancelled: { bg: '#e2e3e5', text: '#383d41' },
+    success: { bg: '#d4edda', text: '#155724' },
+    error: { bg: '#f8d7da', text: '#721c24' },
   };
 
   const style = colors[status] ?? { bg: '#eee', text: '#333' };

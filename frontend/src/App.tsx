@@ -10,7 +10,7 @@ export const App: React.FC = () => {
   return (
     <div style={layoutStyle}>
       <header style={headerStyle}>
-        <h1>🔍 URL Checker Dashboard</h1>
+        <h1 style={{ color: '#ffffff', margin: 0 }}>🔍 URL Checker Dashboard</h1> 
       </header>
 
       {error && <div style={errorAlertStyle}>{error}</div>}

@@ -1,4 +1,3 @@
-/* src/index.css */
 :root {
   color-scheme: light;
 }
@@ -6,12 +5,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0f172a; /* Темный красивый фон вокруг карточек */
+  background-color: #0f172a;
   color: #1e293b;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
-h1, h2, h3, h4 {
-  color: #0f172a !important; /* Делаем все заголовки темными и контрастными */
+h2, h3, h4 {
+  color: #0f172a !important;
   margin-top: 0;
 }
