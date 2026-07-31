@@ -12,7 +12,7 @@ export class JobsService {
   private readonly maxConcurrency: number;
 
   constructor(configService: ConfigService) {
-    this.maxConcurrency = configService.get<number>('MAX_CONCURRENCY', 10);
+    this.maxConcurrency = configService.get<number>('MAX_CONCURRENCY', 5);
   }
 
   create(dto: CreateJobDto): CreateJobResponseDto {
@@ -98,6 +98,10 @@ export class JobsService {
 
     const worker = async (): Promise<void> => {
       while (queue.length > 0) {
+        if (this.isJobCancelled(job)) {
+          break;
+        }
+
         const item = queue.shift();
         if (item) {
           await this.checkUrl(job, item);
